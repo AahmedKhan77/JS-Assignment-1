@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Questions</title>
+</head>
+<body>
+<p>
+    Q1 Get input from user then check number is even or odd and remember one thing if user give text in 
+input not a number then then show a message your answer is not in a number 
+Q2 Get two input from user then find the largest of tow number
+Show result 
+ Is first number is largest form second number?
+ Is first number is smallest form second number?
+ Is first number is equal to the second number
+Q3 Get three input from user then find the largest of three number
+Show result 
+o Is first number is largest form second and third number?
+o Is first number is smallest form second and third number?
+o Is first number is equal to the second and third number?
+Q4 get two input from user then perform arithmetic operation on number?
+Show result 
+ Multiplication
+ Addition 
+ Division 
+ Subtraction
+ Increment
+ Decrement 
+Q5 get input from user between 1 to 100 and it will be parentage of his her marks 
+`Then show result 
+ “S grade” if marks is between 90 and 100.
+ “A grade” if marks is between 80 and 90.
+ “B grade” if marks is between 70 and 80.
+ “C grade” if marks is between 60 and 70.
+ “D grade” if marks is between 50 and 60.
+ “E grade” if marks is between 40 and 50.
+ “Student has failed” if marks is between 0 and 40.
+ If user insert the answer out of the range then show, “Invalid 
+marks”.
+Q6 Ask to the user his city and country name if user from Pakistan then check user form Karachi or not if 
+user from Karachi then show “you are live in Karachi” if user not from Karachi then show his city name. if 
+user not form then then show this country name ?
+Q7 get input from user about his/her age then check 
+Show result 
+ If user less than 18 then show result, you are not eligible to work 
+ If user greater than or equal to 18 and less than 50 then show result, you are eligible to work
+ If user age greater than 50 then show result show result, you are too old as per the company 
+rule
+</p>
+<script>
+    // Q1: Check if a number is even or odd
+    function checkEvenOrOdd() {
+        var userInput = prompt("Enter a number to check if it's even or odd:");
+
+        if (isNaN(userInput)) {
+            alert("Your answer is not a number!");
+        } else {
+            var number = Number(userInput);
+            alert("The number is " + (number % 2 === 0 ? "even" : "odd"));
+        }
+    }
+
+    // Q2: Find the largest of two numbers
+    function findLargestNumber() {
+        var number1 = prompt("Enter the first number:");
+        var number2 = prompt("Enter the second number:");
+
+        if (number1 > number2) {
+            alert("The first number is larger than the second number.");
+        } else if (number1 < number2) {
+            alert("The first number is smaller than the second number.");
+        } else {
+            alert("The first number is equal to the second number.");
+        }
+    }
+
+    // Q3: Find the largest of three numbers
+    function findLargestOfThree() {
+        var number1 = prompt("Enter the first number:");
+        var number2 = prompt("Enter the second number:");
+        var number3 = prompt("Enter the third number:");
+
+        if (number1 > number2 && number1 > number3) {
+            alert("The first number is the largest.");
+        } else if (number1 < number2 && number1 < number3) {
+            alert("The first number is the smallest.");
+        } else {
+            alert("The first number is equal to the second and third numbers.");
+        }
+    }
+
+    // Q4: Perform arithmetic operations on two numbers
+    function performArithmeticOperations() {
+        var number1 = prompt("Enter the first number:");
+        var number2 = prompt("Enter the second number:");
+
+        alert("Multiplication result: " + (number1 * number2));
+        alert("Addition result: " + (Number(number1) + Number(number2)));
+        alert("Division result: " + (number1 / number2));
+        alert("Subtraction result: " + (number1 - number2));
+        alert("Increment result: " + (++number1));
+        alert("Decrement result: " + (--number2));
+    }
+
+    // Q5: Grade based on percentage
+    function assignGrade() {
+        var percentage = prompt("Enter the percentage of marks (between 1 to 100):");
+
+        if (percentage >= 90 && percentage <= 100) {
+            alert("S grade");
+        } else if (percentage >= 80 && percentage < 90) {
+            alert("A grade");
+        } else if (percentage >= 70 && percentage < 80) {
+            alert("B grade");
+        } else if (percentage >= 60 && percentage < 70) {
+            alert("C grade");
+        } else if (percentage >= 50 && percentage < 60) {
+            alert("D grade");
+        } else if (percentage >= 40 && percentage < 50) {
+            alert("E grade");
+        } else if (percentage >= 0 && percentage < 40) {
+            alert("Student has failed");
+        } else {
+            alert("Invalid marks");
+        }
+    }
+
+    // Q6: Check user's city and country
+    function checkCityAndCountry() {
+        var userCity = prompt("Enter your city:");
+        var userCountry = prompt("Enter your country:");
+
+        if (userCountry.toLowerCase() === "pakistan") {
+            if (userCity.toLowerCase() === "karachi") {
+                alert("You live in Karachi.");
+            } else {
+                alert("You are from " + userCity + ".");
+            }
+        } else {
+            alert("You are from " + userCountry + ".");
+        }
+    }
+
+    // Q7: Check user's age eligibility
+    function checkAgeEligibility() {
+        var age = prompt("Enter your age:");
+
+        if (age < 18) {
+            alert("You are not eligible to work.");
+        } else if (age >= 18 && age < 50) {
+            alert("You are eligible to work.");
+        } else {
+            alert("You are too old as per the company rule.");
+        }
+    }
+
+    // Call the functions
+    checkEvenOrOdd();
+    findLargestNumber();
+    findLargestOfThree();
+    performArithmeticOperations();
+    assignGrade();
+    checkCityAndCountry();
+    checkAgeEligibility();
+</script>
+
+</body>
+</html>
